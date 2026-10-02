@@ -41,8 +41,8 @@ Each release on [Releases](https://github.com/reallysec/RST-Splunk-AI-Copilot/re
 
 | Package | Use it for |
 |---|---|
-| `RST-Splunk-AI-Copilot-<version>-selfcontained.spl` | Splunk Enterprise on your own servers (recommended). Includes the agentic engine. |
-| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Splunk Cloud, or where compiled components are not allowed. Pure Python. |
+| `RST-Splunk-AI-Copilot-<version>-selfcontained.spl` | Splunk Enterprise on your own Linux x86_64 servers (recommended). Includes the agentic engine. |
+| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Splunk Enterprise on Windows or ARM search heads, or where compiled components are not allowed. Pure Python. Not for Splunk Cloud yet. |
 
 Install it in Splunk Web (**Apps → Manage Apps → Install app from file**) and restart, or on the search head:
 
@@ -102,14 +102,16 @@ Paid features stay visible in the Community Edition: a paid page opens in previe
 | **Detection-rule copilot**: intent → deployable scheduled saved search with trigger and notable action | — | ✅ | ✅ |
 | **Platform-ops copilot**: AI read of the Splunk check-up and SPL performance advisor | — | ✅ | ✅ |
 | Alert noise reduction, reports and scheduled reports | — | ✅ | ✅ |
-| ES Incident Review write-back | — | — | ✅ |
-| Ticketing (ServiceNow / Jira) | — | — | ✅ |
+| ES Incident Review write-back (Beta) | — | — | ✅ |
+| Ticketing (ServiceNow / Jira) (Beta) | — | — | ✅ |
 | MCP server | — | — | ✅ |
-| Audit forwarding to syslog / webhook (SIEM, SOAR) | — | — | ✅ |
-| Multi-provider LLM failover and health probing | — | — | ✅ |
+| Audit forwarding to syslog / webhook (SIEM, SOAR) (Beta) | — | — | ✅ |
+| Multi-provider LLM failover and health probing (Beta) | — | — | ✅ |
 | Offline / air-gapped activation | — | — | ✅ |
-| Search heads | 1 | 1 | unlimited, incl. SHC |
+| Search heads | 1 | 1 | unlimited, incl. SHC (untested) |
 | Model calls | unlimited (your own model) | unlimited | unlimited |
+
+**Beta:** ES Incident Review write-back, ticketing, Slack / Teams channels, audit forwarding and LLM failover have so far been verified only against local stub endpoints, not against real Enterprise Security, ServiceNow, Jira, Slack, Teams, SIEM or a second LLM vendor. Installing on a search head cluster through the deployer has not been tested.
 
 The four engines ship encrypted; the decryption key comes with the licence and is bound to the host. Editions and purchase: [reallysec.com](https://reallysec.com/en/products/splunk-ai-copilot). Trials and licences: [console.reallysec.com](https://console.reallysec.com).
 
@@ -130,7 +132,9 @@ The four engines ship encrypted; the decryption key comes with the licence and i
 
 | Component | Supported |
 |---|---|
-| Splunk | Splunk Enterprise 10.0–10.5. The agentic engine needs 10.2+ with Python 3.13; below that a fully functional `requests` engine is used automatically |
+| Splunk | Splunk Enterprise 10.0–10.5. The agentic engine needs 10.2+ with Python 3.13; below that a fully functional `requests` engine is used automatically. Tested on Splunk Enterprise 10.4.1, Python 3.13, RHEL 8 |
+| Platform | The `selfcontained` package is Linux x86_64 only; on Windows or ARM use the `fallback` package |
+| Splunk Free | Community features only. Paid features do not work: Splunk Free has no login, so scheduled jobs get no session key and the license heartbeat, scheduled reports and notifications never run |
 | LLM endpoint | Volcengine Ark, any OpenAI-compatible API, self-hosted vLLM / Ollama |
 | Install | Search head with the `admin_all_objects` capability |
 
