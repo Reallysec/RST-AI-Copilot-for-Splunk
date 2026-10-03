@@ -35,14 +35,14 @@
 
 ## 快速开始
 
-需要搜索头上的 Splunk Enterprise 10.0–10.5（10.2+ 且 Python 3.13 才能用 agentic 引擎，低于此版本自动回退），安装所需的 `admin_all_objects` 权限，以及一个搜索头能访问的 OpenAI 兼容大模型端点（[完整要求](https://reallysec.com/docs/splunk-ai-copilot/install/requirements)）。
+需要搜索头上的 Splunk Enterprise 10.0–10.5（10.2+ 且 Python 3.13 才能用 agentic 引擎，低于此版本自动回退），安装所需的 `admin_all_objects` 权限，以及一个搜索头能访问的 OpenAI 兼容大模型端点（[完整要求](https://reallysec.com/docs/splunk-ai-copilot/install/requirements)）。暂不支持 Splunk Cloud：应用内在线更新无法通过 Cloud 审核。
 
 [Releases](https://github.com/reallysec/RST-Splunk-AI-Copilot/releases) 的每个版本都带同一版本号的两个安装包：
 
 | 安装包 | 适用场景 |
 |---|---|
 | `RST-Splunk-AI-Copilot-<version>-selfcontained.spl` | 自有 Linux x86_64 服务器上的 Splunk Enterprise（推荐），自带 agentic 引擎 |
-| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Windows 或 ARM 搜索头、或不允许编译组件的 Splunk Enterprise 环境，纯 Python；暂不支持 Splunk Cloud |
+| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Windows 或 ARM 搜索头、或不允许编译组件的 Splunk Enterprise 环境，纯 Python |
 
 在 Splunk Web 里安装（**Apps → Manage Apps → Install app from file**）后重启，或在搜索头上：
 

@@ -35,14 +35,14 @@
 
 ## Quick start
 
-You need Splunk Enterprise 10.0–10.5 on the search head (10.2+ with Python 3.13 to get the agentic engine, automatic fallback below that), the `admin_all_objects` capability to install, and an OpenAI-compatible LLM endpoint the search head can reach ([full requirements](https://reallysec.com/en/docs/splunk-ai-copilot/install/requirements)).
+You need Splunk Enterprise 10.0–10.5 on the search head (10.2+ with Python 3.13 to get the agentic engine, automatic fallback below that), the `admin_all_objects` capability to install, and an OpenAI-compatible LLM endpoint the search head can reach ([full requirements](https://reallysec.com/en/docs/splunk-ai-copilot/install/requirements)). Splunk Cloud is not supported yet: the in-app online update would not pass Cloud vetting.
 
 Each release on [Releases](https://github.com/reallysec/RST-Splunk-AI-Copilot/releases) carries two packages of the same version:
 
 | Package | Use it for |
 |---|---|
 | `RST-Splunk-AI-Copilot-<version>-selfcontained.spl` | Splunk Enterprise on your own Linux x86_64 servers (recommended). Includes the agentic engine. |
-| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Splunk Enterprise on Windows or ARM search heads, or where compiled components are not allowed. Pure Python. Not for Splunk Cloud yet. |
+| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Splunk Enterprise on Windows or ARM search heads, or where compiled components are not allowed. Pure Python. |
 
 Install it in Splunk Web (**Apps → Manage Apps → Install app from file**) and restart, or on the search head:
 
