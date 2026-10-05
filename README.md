@@ -102,16 +102,16 @@ Paid features stay visible in the Community Edition: a paid page opens in previe
 | **Detection-rule copilot**: intent → deployable scheduled saved search with trigger and notable action | — | ✅ | ✅ |
 | **Platform-ops copilot**: AI read of the Splunk check-up and SPL performance advisor | — | ✅ | ✅ |
 | Alert noise reduction, reports and scheduled reports | — | ✅ | ✅ |
-| ES Incident Review write-back (Beta) | — | — | ✅ |
+| ES Incident Review write-back | — | — | ✅ |
 | Ticketing (ServiceNow / Jira) (Beta) | — | — | ✅ |
 | MCP server | — | — | ✅ |
-| Audit forwarding to syslog / webhook (SIEM, SOAR) (Beta) | — | — | ✅ |
+| Audit forwarding to syslog / webhook (SIEM, SOAR) | — | — | ✅ |
 | Multi-provider LLM failover and health probing (Beta) | — | — | ✅ |
 | Offline / air-gapped activation | — | — | ✅ |
 | Search heads | 1 | 1 | unlimited, incl. SHC (untested) |
 | Model calls | unlimited (your own model) | unlimited | unlimited |
 
-**Beta:** ES Incident Review write-back, ticketing, Slack / Teams channels, audit forwarding and LLM failover have so far been verified only against local stub endpoints, not against real Enterprise Security, ServiceNow, Jira, Slack, Teams, SIEM or a second LLM vendor. Installing on a search head cluster through the deployer has not been tested.
+**Beta:** ticketing, Slack / Teams channels and LLM failover have so far been verified only against local stub endpoints, not against real ServiceNow, Jira, Slack, Teams or a second LLM vendor. Installing on a search head cluster through the deployer has not been tested.
 
 The four engines ship encrypted; the decryption key comes with the licence and is bound to the host. Editions and purchase: [reallysec.com](https://reallysec.com/en/products/splunk-ai-copilot). Trials and licences: [console.reallysec.com](https://console.reallysec.com).
 

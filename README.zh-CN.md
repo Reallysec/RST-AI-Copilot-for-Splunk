@@ -102,16 +102,16 @@ $SPLUNK_HOME/bin/splunk restart
 | **检测规则副驾**：意图 → 可部署的定时 saved search，带触发条件和 notable 动作 | — | ✅ | ✅ |
 | **平台运维副驾**：对 Splunk 体检的 AI 解读和 SPL 性能顾问 | — | ✅ | ✅ |
 | 告警降噪、报表与定时报告 | — | ✅ | ✅ |
-| ES Incident Review 写回（Beta） | — | — | ✅ |
+| ES Incident Review 写回 | — | — | ✅ |
 | 工单（ServiceNow / Jira，Beta） | — | — | ✅ |
 | MCP 服务 | — | — | ✅ |
-| 审计转发到 syslog / webhook（SIEM、SOAR，Beta） | — | — | ✅ |
+| 审计转发到 syslog / webhook（SIEM、SOAR） | — | — | ✅ |
 | 多提供方大模型故障转移与健康探测（Beta） | — | — | ✅ |
 | 离线 / 气隙激活 | — | — | ✅ |
 | 搜索头数 | 1 | 1 | 不限，含 SHC（未测试） |
 | 模型调用次数 | 不限（用你自己的模型） | 不限 | 不限 |
 
-**Beta：** ES Incident Review 写回、工单、Slack / Teams 通道、审计转发和大模型故障转移目前只在本地模拟端点（stub）上验证过，尚未在真实的 Enterprise Security、ServiceNow、Jira、Slack、Teams、SIEM 或第二家大模型服务上验证。通过 deployer 安装到搜索头集群尚未测试。
+**Beta：** 工单、Slack / Teams 通道和大模型故障转移目前只在本地模拟端点（stub）上验证过，尚未在真实的 ServiceNow、Jira、Slack、Teams 或第二家大模型服务上验证。通过 deployer 安装到搜索头集群尚未测试。
 
 四个引擎以密文形式发布，解密密钥随许可下发并绑定主机。版本与购买：[reallysec.com](https://reallysec.com/products/splunk-ai-copilot)。试用与许可：[console.reallysec.com](https://console.reallysec.com)。
 
