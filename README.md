@@ -108,10 +108,10 @@ Paid features stay visible in the Community Edition: a paid page opens in previe
 | Audit forwarding to syslog / webhook (SIEM, SOAR) | — | — | ✅ |
 | Multi-provider LLM failover and health probing (Beta) | — | — | ✅ |
 | Offline / air-gapped activation | — | — | ✅ |
-| Search heads | 1 | 1 | unlimited, incl. SHC (untested) |
+| Search heads | 1 | 1 | unlimited, incl. SHC |
 | Model calls | unlimited (your own model) | unlimited | unlimited |
 
-**Beta:** ticketing, Slack / Teams channels and LLM failover have so far been verified only against local stub endpoints, not against real ServiceNow, Jira, Slack, Teams or a second LLM vendor. Installing on a search head cluster through the deployer has not been tested.
+**Beta:** ticketing, Slack / Teams channels and LLM failover have so far been verified only against local stub endpoints, not against real ServiceNow, Jira, Slack, Teams or a second LLM vendor.
 
 The four engines ship encrypted; the decryption key comes with the licence and is bound to the host. Editions and purchase: [reallysec.com](https://reallysec.com/en/products/splunk-ai-copilot). Trials and licences: [console.reallysec.com](https://console.reallysec.com).
 

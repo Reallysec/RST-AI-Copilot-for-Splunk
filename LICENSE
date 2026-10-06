@@ -1,6 +1,6 @@
 # RST AI Copilot for Splunk — End User License Agreement
 
-Version 1.3 · Effective 2026-10-06
+Version 1.4 · Effective 2026-10-06
 
 This End User License Agreement (the "Agreement") is between Anhui Reallysec
 Information Technology Ltd. (安徽斯普朗克信息技术有限公司, "Reallysec") and the
@@ -9,10 +9,11 @@ this Agreement on behalf of an organization, you represent that you have the
 authority to bind that organization, and "you" refers to that organization.
 
 **How you accept.** You accept this Agreement by installing, activating, or
-using the Software. Where the Software asks a User to confirm that they have
-read and agree to this Agreement (for example on first use, or after the
-version of this Agreement changes), a User who does not confirm may not use the
-Software. If you do not agree, do not install or use the Software.
+using the Software. In every Edition, including the Community Edition, the
+Software also asks each User, in its user interface, to confirm that they have
+read and agree to this Agreement before the User first uses it there and again
+after the version of this Agreement changes. A User who does not confirm may not
+use the Software. If you do not agree, do not install or use the Software.
 
 **Please read the sections in bold with particular care. They limit Reallysec's
 warranties, indemnity and liability (Sections 9, 10 and 11), restrict how you
@@ -147,9 +148,14 @@ sends data outside your environment only as listed here:
   session needs renewing, the Software sends Reallysec's license service
   (license.reallysec.com) the license identifier and, on activation, the license
   key itself, the product identifier and version, the Splunk server GUID, the
-  host fingerprint (a hash derived from machine identifiers), the Splunk version
-  (on activation), the number of Users (on each heartbeat), a random one-time
-  value and a timestamp. About once every twenty-four (24) hours the Software
+  host fingerprints (hashes derived from machine identifiers, such as the
+  operating system's machine ID, a network adapter address and the processor
+  description, or, on a host that has none of these, from a random host
+  identifier that the Software generates and keeps in its own local directory
+  and never sends; while a License moves to a newer fingerprint format, both the
+  earlier and the newer value may be sent), the Splunk version (on activation),
+  the number of Users (on each heartbeat), a random one-time value and a
+  timestamp. About once every twenty-four (24) hours the Software
   also downloads the license service's list of revoked Licenses; that request
   carries only the date of the list it already holds. Without a License, the
   Software does not contact the license service. Offline activation, where your
@@ -205,10 +211,11 @@ rules.**
 channel or other destination you configure is outside mainland China, you are
 responsible for any security assessment, standard contract, certification,
 consent or other requirement that applies to sending data to it.** Reallysec
-operates the license service and may host it outside mainland China, and GitHub
-Releases is operated by GitHub outside mainland China. Only the data listed in
-Section 6.2 is sent to them. An installation without a License or activated
-offline sends nothing to the license service.
+operates the license service in the Hong Kong Special Administrative Region of
+China (outside mainland China), and GitHub Releases is operated by GitHub
+outside mainland China. Only the data listed in Section 6.2 is sent to them. An
+installation without a License or activated offline sends nothing to the license
+service.
 
 ### 6.6 Support access
 
@@ -397,12 +404,14 @@ results from your use of the Software in violation of law. Sections 3, 4, 6.6,
 
 Reallysec may update this Agreement. Each version of the Software is delivered
 with the Agreement that applies to it, and the version number and effective
-date appear at the top. When the version changes, the Software may ask each
-User to accept the new version as described at the beginning of this Agreement. For
-a paid License, the Agreement in effect when your License term starts applies
-until that term ends, and an updated Agreement applies from your next renewal.
-For the Community Edition and trials, an updated Agreement applies when you
-install, or upgrade to, a version of the Software that includes it.
+date appear at the top. When the version changes, the Software asks each User to
+accept the new version as described at the beginning of this Agreement. For a
+paid License, confirming a new version during your Subscription Term does not
+change which version applies to that term. For a paid License, the Agreement in
+effect when your License term starts applies until that term ends, and an
+updated Agreement applies from your next renewal. For the Community Edition and
+trials, an updated Agreement applies when you install, or upgrade to, a version
+of the Software that includes it.
 
 ## 14. Export Control and Sanctions
 
@@ -472,16 +481,17 @@ Contact: https://reallysec.com
 
 # RST AI Copilot for Splunk 最终用户许可协议
 
-版本 1.3 · 生效日期 2026-10-06
+版本 1.4 · 生效日期 2026-10-06
 
 本《最终用户许可协议》（「本协议」）由安徽斯普朗克信息技术有限公司（Anhui
 Reallysec Information Technology Ltd.，「版权人」）与安装或使用本软件的个人
 或单位（「您」）订立。您代表单位接受本协议的，即表示您有权代表该单位签约，
 「您」指该单位。
 
-**接受方式。** 您安装、激活或使用本软件，即表示接受本协议。本软件请用户确认
-已阅读并同意本协议的（例如首次使用时，或本协议版本变更后），未予确认的用户
-不得使用本软件。如不同意，请勿安装或使用本软件。
+**接受方式。** 您安装、激活或使用本软件，即表示接受本协议。在包括社区版在内的
+各版本中，本软件均会在其用户界面中，于每位用户首次使用前及本协议版本变更后，请
+该用户确认已阅读并同意本协议。未予确认的用户不得使用本软件。如不同意，请勿安装或
+使用本软件。
 
 **请您特别注意本协议中以加粗方式标示的条款。这些条款限制版权人的担保、赔偿及
 责任（第九条、第十条、第十一条），限制您使用本软件的方式（第三条、第十四条），
@@ -583,8 +593,11 @@ Jira、威胁情报查询服务及审计转发目标）外，本软件仅在下�
 - **许可服务。** 在线激活许可时（首次尝试失败的，每隔数分钟重试直至成功），此后
   许可有效期间大约每二十四（24）小时一次，以及会话需要续期时，本软件向版权人的
   许可服务（license.reallysec.com）发送许可标识（激活时还发送许可密钥本身）、
-  产品标识及版本、Splunk 服务器 GUID、主机指纹（由机器标识生成的哈希值）、Splunk
-  版本（激活时）、用户数（每次心跳时）、一次性随机值以及时间戳。本软件还大约每
+  产品标识及版本、Splunk 服务器 GUID、主机指纹（由操作系统机器 ID、网卡地址、处理
+  器描述等机器标识生成的哈希值；主机不具备上述标识的，由本软件在其本地目录中生成并
+  保存的随机主机标识生成，该主机标识本身不对外发送；许可迁移至新的指纹格式期间，可
+  能同时发送新旧两个指纹值）、Splunk 版本（激活时）、用户数（每次心跳时）、一次性
+  随机值以及时间戳。本软件还大约每
   二十四（24）小时从许可服务下载一次已吊销许可清单，该请求仅携带其已持有清单的
   日期。未使用许可时，本软件不联系许可服务。您的版本包含离线激活时，离线激活不
   联系许可服务。
@@ -621,9 +634,10 @@ Jira、威胁情报查询服务及审计转发目标）外，本软件仅在下�
 ### （五）数据出境
 
 **您的数据发送至何处由您决定。您配置的大模型服务商、通知渠道或其他目的地位于中国
-境外的，向其发送数据所适用的安全评估、标准合同、认证、个人同意或其他要求，由您
-负责履行。** 许可服务由版权人运营，可能部署在中国境外；GitHub Releases 由 GitHub
-在中国境外运营。向其发送的数据仅限于本条第（二）款所列数据。未使用许可或离线激活
+大陆境外的，向其发送数据所适用的安全评估、标准合同、认证、个人同意或其他要求，由
+您负责履行。** 许可服务由版权人运营，部署在中国香港特别行政区（中国大陆境外）；
+GitHub Releases 由 GitHub 在中国大陆境外运营。向其发送的数据仅限于本条第（二）款
+所列数据。未使用许可或离线激活
 的安装实例不向许可服务发送任何数据。
 
 ### （六）支持访问
@@ -757,10 +771,10 @@ Jira、威胁情报查询服务及审计转发目标）外，本软件仅在下�
 ## 十三、协议变更
 
 版权人可更新本协议。本软件的每个版本均随附适用于该版本的协议，版本号及生效日期
-载于协议开头。协议版本变更时，本软件可按本协议开头所述方式请每位用户接受新版本。
-对于付费许可，许可期限开始时有效的协议适用至该期限届满，更新后的协议自您下次续订
-时起适用。对于社区版及试用，更新后的协议自您安装或升级至包含该协议的本软件版本时
-起适用。
+载于协议开头。协议版本变更时，本软件按本协议开头所述方式请每位用户接受新版本。
+对于付费许可，在许可期限内确认新版本不改变该期限所适用的协议版本。对于付费许可，
+许可期限开始时有效的协议适用至该期限届满，更新后的协议自您下次续订时起适用。对于
+社区版及试用，更新后的协议自您安装或升级至包含该协议的本软件版本时起适用。
 
 ## 十四、出口管制与制裁
 
