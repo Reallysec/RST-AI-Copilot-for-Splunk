@@ -1,56 +1,82 @@
-# RST Splunk AI Copilot — End User License Agreement
+# RST AI Copilot for Splunk — End User License Agreement
 
-Version 1.2 · Effective 2026-10-06
+Version 1.3 · Effective 2026-10-06
 
 This End User License Agreement (the "Agreement") is between Anhui Reallysec
 Information Technology Ltd. (安徽斯普朗克信息技术有限公司, "Reallysec") and the
-individual or entity that installs or uses the Software ("you"). By installing,
-activating, or using the Software you agree to this Agreement. If you do not
-agree, do not install or use the Software. If you accept this Agreement on
-behalf of an organization, you represent that you have the authority to bind
-that organization, and "you" refers to that organization.
+individual or entity that installs or uses the Software ("you"). If you accept
+this Agreement on behalf of an organization, you represent that you have the
+authority to bind that organization, and "you" refers to that organization.
+
+**How you accept.** You accept this Agreement by installing, activating, or
+using the Software. Where the Software asks a User to confirm that they have
+read and agree to this Agreement (for example on first use, or after the
+version of this Agreement changes), a User who does not confirm may not use the
+Software. If you do not agree, do not install or use the Software.
 
 **Please read the sections in bold with particular care. They limit Reallysec's
-warranties and liability and restrict how you may use the Software.**
+warranties, indemnity and liability (Sections 9, 10 and 11), restrict how you
+may use the Software (Sections 3 and 14), and set out your responsibilities for
+Your Data and the destinations you send it to (Section 6), for AI-generated
+output, and for changes the Software makes in your Splunk® deployment and
+connected systems at your direction (Section 9.3).**
 
 ## 1. Definitions
 
-- **"Software"** means RST Splunk AI Copilot as delivered by Reallysec,
-  including the Splunk app package, sealed and compiled feature modules,
-  documentation, and any updates Reallysec provides.
+- **"Software"** means RST AI Copilot for Splunk in object-code form as
+  delivered by Reallysec, including the Splunk app package, sealed and compiled
+  feature modules, documentation, and any updates Reallysec provides. The
+  Software is a security-operations assistant that runs inside, reads from, and
+  at your direction acts on, the Splunk deployment you install it in.
 - **"Documentation"** means the user and installation guides Reallysec publishes
   for the Software at https://reallysec.com/docs.
 - **"License"** means the license key or license file issued by Reallysec that
   specifies your edition, feature set, search head count, user count, and term.
+- **"Edition"** means the Community, Professional, or Enterprise edition, or a
+  trial. The Professional and Enterprise editions and trials are stated in your
+  License; the Community Edition is the Software used without a License.
+- **"Paid Edition"** means the Professional or Enterprise edition under a License
+  for which you have paid the applicable fees. A trial is not a Paid Edition.
+- **"Subscription Term"** means the term of a Paid Edition License stated in
+  your License or Order.
 - **"Search head"** means a Splunk search head, or a member of a search head
   cluster, on which the Software is installed.
 - **"User"** means a Splunk user account that holds one of the Software's roles
   or otherwise has the capability to use the Software.
-- **"Edition"** means the Community, Professional, or Enterprise edition, or a
-  trial. The Professional and Enterprise editions and trials are stated in your
-  License; the Community Edition is the Software used without a License.
 - **"Order"** means the quotation, purchase order, or other document under which
   you acquired the License.
-- **"Your Data"** means the logs, alerts, and other data that the Software
-  processes on your behalf.
+- **"Your Data"** means the logs, events, alerts, notable events, asset and
+  identity records, configuration, and other data that the Software reads from
+  your Splunk deployment or otherwise processes on your behalf.
+- **"Language-Model Provider"** means the provider of a language-model or
+  embeddings endpoint that you configure in the Software, including a model you
+  host yourself.
+- **"AI Output"** means analyses, summaries, answers, SPL queries, detection
+  rules, proposed changes, and other content that the Software generates with a
+  language model.
+- **"Splunk Actions"** means changes the Software makes when you or your users
+  instruct it to, such as updating the status, urgency, owner or comments of
+  Splunk Enterprise Security notable events, deploying, enabling, changing or
+  deleting detection rules as saved searches, and creating tickets or sending
+  notifications through the services you connect.
 
 ## 2. License Grant
 
 Subject to this Agreement and payment of the applicable fees, Reallysec grants
 you a non-exclusive, non-transferable, non-sublicensable license, for the term
 stated in your License, to install and use the Software for your internal
-business operations, on no more search heads and for no more users than your
-License permits, and limited to the features of your Edition. Your employees and contractors may use the
-Software on your behalf; you are responsible for their compliance with this
-Agreement.
+business operations, on no more search heads and for no more Users than your
+License permits, and limited to the features of your Edition. Your employees
+and contractors may use the Software on your behalf; you are responsible for
+their compliance with this Agreement.
 
 A trial License grants the same rights for evaluation only, for the trial period
 stated in the License.
 
 Without a License, Reallysec grants you the same license free of charge and
 without a fixed term, limited to the features of the Community Edition and one
-search head. Reallysec may change the features of the Community Edition
-in later versions of the Software.
+search head. Reallysec may change the features of the Community Edition in
+later versions of the Software.
 
 ## 3. Restrictions
 
@@ -59,18 +85,19 @@ in later versions of the Software.
 1. **move, change, disable, or circumvent the license key functionality, or
    remove or obscure any functionality protected by the license key;**
 2. **decrypt, decompile, disassemble, or reverse engineer the sealed or
-   compiled feature modules or any other part of the Software, except to the extent applicable
-   law expressly permits despite this restriction;**
+   compiled feature modules or any other part of the Software, except to the
+   extent applicable law expressly permits despite this restriction;**
 3. **provide the Software to third parties as a hosted or managed service, or
    otherwise give third parties access to a substantial set of its features;**
 4. **sell, rent, lease, lend, sublicense, distribute, or otherwise transfer the
    Software or the License, except as Reallysec agrees in writing;**
-5. **share one License across more search heads, users, hosts, or
+5. **share one License across more search heads, Users, hosts, or
    organizations than it permits;**
 6. **remove, alter, or obscure any copyright, trademark, license, or other
    notice in the Software;**
-7. **use the Software in violation of applicable law, including export control
-   and data protection laws.**
+7. **use the Software in violation of applicable law, including the export
+   control, sanctions and data protection laws referred to in Sections 6 and
+   14.**
 
 ## 4. Ownership
 
@@ -78,107 +105,331 @@ The Software is licensed, not sold. Reallysec and its licensors retain all right
 title, and interest in and to the Software, including all intellectual property
 rights. All rights not expressly granted in this Agreement are reserved.
 
+Reallysec claims no ownership of Your Data or of AI Output. Your use of AI
+Output is at your own risk under Section 9.3.
+
 If you provide suggestions or feedback about the Software, Reallysec may use them
 without restriction or obligation to you.
 
-## 5. Third-Party Components
+## 5. Third-Party Components and Services
 
 The Software includes third-party and open-source components, listed in the
 THIRD-PARTY-NOTICES file delivered with the Software. Each is licensed under its
 own terms, which govern your use of that component. Nothing in this Agreement
 limits your rights under those licenses.
 
-## 6. Data
+Your Splunk deployment (including Splunk Enterprise Security), your
+Language-Model Providers, and the notification, ticketing, threat-intelligence
+and audit-forwarding services you connect to the Software are not part of the
+Software. You obtain them under your own agreements with their providers.
+Reallysec does not control them and is not responsible for their availability,
+security, content, or handling of data you send to them.
+
+## 6. Data and Privacy
+
+### 6.1 Your Data
 
 The Software runs inside your Splunk deployment. Your Data stays under your
 control, and you are responsible for it, including under applicable data
-protection laws.
+protection laws. Reallysec does not receive Your Data through the Software,
+except during support access under Section 6.6.
 
-- **License and update service.** To activate and validate the License and to
-  offer updates, the Software sends Reallysec's license service the license
-  identifier, the product identifier and version, a hashed host fingerprint
-  derived from machine identifiers, and activation status. It does not send
-  Your Data. Offline activation, where your Edition includes it, sends nothing.
-- **Language models.** The Software sends prompts, which may include portions of
-  Your Data, to the language-model endpoints you configure, subject to the field
-  masking mode you select. Those endpoints are provided by you or your chosen
-  provider under their own terms; Reallysec does not receive that data.
+### 6.2 What the Software sends outside your environment
 
-## 7. Updates, Support, and Preview Features
+Apart from destinations you configure yourself (such as Language-Model
+Providers and embeddings endpoints, notification channels, ServiceNow or Jira,
+threat-intelligence lookup services, and audit-forwarding targets), the Software
+sends data outside your environment only as listed here:
 
-Reallysec may provide updates during the term of your License. Support, service
-levels, and maintenance are provided only as set out in your Order or a separate
-support agreement.
+- **License service.** When a License is activated online (and, if that first
+  attempt fails, at intervals of a few minutes until it succeeds), afterwards
+  about once every twenty-four (24) hours while it remains active, and when its
+  session needs renewing, the Software sends Reallysec's license service
+  (license.reallysec.com) the license identifier and, on activation, the license
+  key itself, the product identifier and version, the Splunk server GUID, the
+  host fingerprint (a hash derived from machine identifiers), the Splunk version
+  (on activation), the number of Users (on each heartbeat), a random one-time
+  value and a timestamp. About once every twenty-four (24) hours the Software
+  also downloads the license service's list of revoked Licenses; that request
+  carries only the date of the list it already holds. Without a License, the
+  Software does not contact the license service. Offline activation, where your
+  Edition includes it, does not contact the license service.
+- **Update checks.** When an administrator opens the version and update section
+  of the Software's settings, the Software downloads the signed release
+  manifest from GitHub Releases, or from a mirror you configure, and it
+  downloads a release only when an administrator chooses to. These requests
+  send no customer data beyond what any HTTP request carries. The Software does
+  not check for updates on its own schedule. In an environment without internet
+  access the check simply fails.
+- **OS end-of-life catalog.** If an administrator runs the end-of-life catalog
+  sync tool manually, it downloads public product lifecycle data from
+  endoflife.date and sends no customer data.
+- **Language models.** The Software sends prompts and query results, which may
+  include portions of Your Data, to the language-model and embeddings endpoints
+  you configure, subject to the field masking mode you select. Reallysec does
+  not receive that data.
+
+The license service also receives the IP address from which each request
+comes, as any internet service does. Nothing sent to Reallysec, to GitHub or to
+endoflife.date under this Section includes the contents of your logs, events,
+alerts, questions or AI Output. Reallysec does not use Your Data to train
+language models.
+
+### 6.3 How Reallysec uses license-service data
+
+Reallysec uses the data in Section 6.2 that reaches its license service,
+including the IP address, only to activate and validate Licenses, to enforce
+the search head and User limits of your License, to detect misuse of Licenses,
+to verify usage under Section 8, and to provide support. Reallysec does not sell
+this data or use it for advertising. Reallysec keeps it while your License is
+active and for up to two (2) years after it ends, or longer only where the law
+requires, and then deletes or anonymizes it. Where any of this data is personal
+information, Reallysec handles it as described in its privacy notice at
+https://reallysec.com/en/privacy-policy.
+
+### 6.4 Language-Model Providers and other destinations
+
+**Field masking matches known patterns and field names. It reduces, but does not
+guarantee to remove, personal or sensitive information in what is sent to a
+Language-Model Provider, and it does not apply to the indicators sent to a
+threat-intelligence lookup service. You choose the Language-Model Provider, the
+masking mode and the other destinations. You are responsible for your agreement
+with each of them, including whether it may retain your data or use it to train
+models, and for complying with the laws that apply to sending data to it,
+including personal information protection and cross-border data transfer
+rules.**
+
+### 6.5 Cross-border transfers
+
+**You decide where Your Data goes. If a Language-Model Provider, notification
+channel or other destination you configure is outside mainland China, you are
+responsible for any security assessment, standard contract, certification,
+consent or other requirement that applies to sending data to it.** Reallysec
+operates the license service and may host it outside mainland China, and GitHub
+Releases is operated by GitHub outside mainland China. Only the data listed in
+Section 6.2 is sent to them. An installation without a License or activated
+offline sends nothing to the license service.
+
+### 6.6 Support access
+
+Reallysec accesses your environment or Your Data only when you authorize it in
+advance for a specific support request, and only to the extent you authorize.
+In doing so Reallysec acts on your behalf as an entrusted party under Article 21
+of the Personal Information Protection Law of the People's Republic of China.
+Reallysec will process Your Data only to provide the support you requested and
+according to your instructions, will keep it confidential, will limit access to
+personnel bound by confidentiality obligations, and will not keep copies after
+the support is complete unless you agree. On request, Reallysec will sign a
+data processing agreement with you that sets out these obligations.
+
+## 7. License Checks, Updates, Support, and Preview Features
+
+**A paid or trial License is checked when it is activated and while the
+Software runs, and, for online activation, at each heartbeat under Section 6.2.
+If the License expires or is revoked, or online checks keep failing beyond the
+grace period described in the Documentation, the features beyond the Community
+Edition stop and the Software continues as the Community Edition. Your Data is
+not deleted.**
+
+Releases are signed by Reallysec, and the Software rejects any that fail
+signature or checksum verification. A new release is downloaded and installed
+only when an administrator chooses to.
+
+Reallysec may provide updates during the term of your License, and for the
+Community Edition at its discretion. Support, service levels, and maintenance
+are provided only as set out in your Order or a separate support agreement.
 
 Features that the Software or the Documentation marks as preview, beta, or
 experimental are provided for evaluation. Reallysec may change or remove them
-at any time, and Section 9.1 does not apply to them.
+at any time, and Sections 9.1 and 10 do not apply to them.
 
 ## 8. Usage Verification
 
-At Reallysec's written request, no more than once in any twelve (12) month
-period, you will provide within thirty (30) days a written statement, signed by
-an authorized representative, of the number of search heads on which the
-Software is installed, the number of users, and the Edition in use. If the statement shows use beyond your
-License, you will pay the applicable fees for the excess use under Reallysec's
-then-current price list.
+**Self-certification.** At Reallysec's written request, no more than once in
+any twelve (12) month period, you will provide within thirty (30) days a
+written statement, signed by an authorized representative, of the number of
+search heads on which the Software is installed, the number of Users, and the
+Edition in use. Reallysec may also rely on the activation records held by its
+license service.
+
+**Audit.** Reallysec, or an independent auditor bound by confidentiality
+obligations, may verify your use of the Software no more than once in any
+twelve (12) month period, on at least thirty (30) days' written notice, during
+your normal business hours, remotely where practicable, and in a way that does
+not unreasonably interfere with your business. Information obtained in an audit
+is used only to verify compliance with your License and is kept confidential.
+Reallysec bears the cost of the audit, unless it shows that you underpaid the
+fees due for the audited period by more than five percent (5%), in which case
+you will reimburse Reallysec's reasonable audit costs.
+
+If the verification shows use beyond your License, you will pay the applicable
+fees for the excess use under Reallysec's then-current price list.
 
 ## 9. Warranty
 
-### 9.1 Limited warranty
+### 9.1 Limited warranty for Paid Editions
 
-For a paid License, Reallysec warrants that for ninety (90) days from the date
-the License is first issued, the Software will perform substantially as
-described in the Documentation. If it does not, and you notify Reallysec within
-that period, Reallysec will at its option correct the Software or refund the
-fees you paid for the nonconforming Software, in which case your License ends.
-**This is your sole and exclusive remedy for breach of this warranty.** The
-warranty does not apply to the Community Edition, trial Licenses, preview features, or problems caused
-by modification, misuse, or an environment the Documentation does not support.
+Reallysec warrants that during the Subscription Term, the Software, as
+delivered by Reallysec, will perform materially in accordance with the
+Documentation. If it does not, and you notify Reallysec in writing with
+reasonable detail during the Subscription Term, Reallysec will repair or
+replace the Software. If Reallysec cannot do so within thirty (30) days of your
+notice, either party may terminate the affected License, and Reallysec will
+refund the fees you prepaid for the unused remainder of its Subscription Term.
+**This is your sole and exclusive remedy, and Reallysec's entire liability, for
+breach of this warranty.** The warranty does not apply to preview features, AI
+Output, third-party components and services, releases Reallysec no longer
+supports, or problems caused by modification, misuse, or an environment the
+Documentation does not support.
 
 ### 9.2 Disclaimer
 
-**Except for Section 9.1, and to the maximum extent permitted by law, the
-Software is provided "as is" and "as available", without warranties of any
-kind, express or implied, including warranties of merchantability, fitness for
-a particular purpose, and non-infringement. Reallysec does not warrant that the
-Software will be error-free or uninterrupted, or that it will detect, prevent,
-or mitigate any security incident. Output generated with language models may
-be inaccurate and must be reviewed before you rely on it. The Software supports,
-and does not replace, your own security controls, monitoring, and professional
-judgment.**
+**The Community Edition, trial Licenses and preview features are provided
+"as is", without any warranty. Except for Section 9.1, and to the maximum
+extent permitted by law, the Software is provided "as is" and "as available",
+without warranties of any kind, express or implied, including warranties of
+merchantability, fitness for a particular purpose, and non-infringement.
+Reallysec does not warrant that the Software will be error-free or
+uninterrupted, or that it will detect, prevent, or mitigate any security
+incident. The Software supports, and does not replace, your own security
+controls, monitoring, and professional judgment.**
 
-## 10. Limitation of Liability
+### 9.3 AI Output and Splunk Actions
 
-**To the maximum extent permitted by law, Reallysec is not liable for any
+**AI Output is generated by language models that Reallysec does not control. It
+may be incomplete or wrong, and the same input may produce different output.
+A qualified person must review AI Output, including any proposed change, SPL
+query, detection rule, triage verdict or investigation finding, before you rely
+or act on it.**
+
+**Splunk Actions are taken at your direction. You decide which users may take
+them, you control the Splunk roles and capabilities you grant the Software and
+its users, and you are responsible for reviewing each proposed change before
+you confirm it and for the effect of the changes you confirm on your Splunk
+deployment and connected systems. Reallysec recommends that you grant only the
+capabilities that are needed, try detection rules outside production first, and
+keep backups of your Splunk configuration.**
+
+## 10. Intellectual Property Indemnity (Paid Editions)
+
+**10.1 Defense and payment.** If a third party brings a claim against you
+alleging that the Software of a Paid Edition, as delivered by Reallysec and used
+in accordance with this Agreement and the Documentation, infringes that third
+party's patent, copyright or trademark or misappropriates its trade secret,
+Reallysec will defend you against the claim at its own expense and will pay the
+damages and costs finally awarded against you by a court or arbitral tribunal,
+or agreed in a settlement that Reallysec approves in writing.
+
+**10.2 Procedure.** Reallysec's obligations apply only if you (a) notify
+Reallysec in writing promptly enough that its defense is not prejudiced,
+(b) give Reallysec sole control of the defense and settlement of the claim, and
+(c) provide reasonable cooperation, at Reallysec's expense for your reasonable
+out-of-pocket costs. You may take part in the defense with your own counsel at
+your own expense. You may not settle the claim without Reallysec's prior written
+consent, and Reallysec will not, without your consent, agree to a settlement
+that requires you to admit fault or to do anything other than stop using the
+Software.
+
+**10.3 Remedies.** If the Software is, or in Reallysec's opinion is likely to
+be, held to infringe, Reallysec may at its option and expense (a) obtain the
+right for you to continue using it, (b) modify or replace it so that it no
+longer infringes without materially reducing its functionality, or (c) if
+neither is commercially reasonable, terminate the affected License and refund
+the fees you prepaid for the unused remainder of its Subscription Term.
+
+**10.4 Exclusions. Reallysec has no obligation under this Section for any claim
+to the extent it arises from: (a) the Community Edition, a trial License or
+preview features; (b) modification of the Software by anyone other than
+Reallysec; (c) combination of the Software with products, data, or processes
+not provided by Reallysec, where the claim would not have arisen without the
+combination; (d) AI Output, or the models and services of Language-Model
+Providers; (e) third-party and open-source components listed in the
+THIRD-PARTY-NOTICES file, or the third-party services described in Section 5;
+(f) Your Data or other materials you provide; (g) your continued use of the
+allegedly infringing Software after Reallysec has told you to stop or has
+provided a modification or update that would have avoided the claim; or
+(h) your use of the Software in breach of this Agreement.**
+
+**10.5 Limits. Reallysec's obligations under this Section are subject to the
+limit in Section 11.2. This Section states Reallysec's entire liability, and
+your exclusive remedy, for any claim that the Software infringes or
+misappropriates a third party's intellectual property rights.**
+
+## 11. Limitation of Liability
+
+**11.1 To the maximum extent permitted by law, Reallysec is not liable for any
 indirect, incidental, special, consequential, or punitive damages, or for any
 loss of profits, revenue, data, or business, even if advised of the possibility
 of such damages.**
 
-**Reallysec's total cumulative liability arising out of or relating to this
-Agreement, under any theory of liability, will not exceed the fees you actually
-paid to Reallysec for the Software in the twelve (12) months before the event
-giving rise to the claim. For the Community Edition or a trial License this amount is zero.**
+**11.2 To the maximum extent permitted by law, Reallysec's total cumulative
+liability arising out of or relating to this Agreement, under any theory of
+liability, will not exceed (a) for a Paid Edition, the fees you actually paid
+to Reallysec for the Software in the twelve (12) months before the event giving
+rise to the claim; and (b) for the Community Edition, a trial License, or
+preview features, the greater of those fees and RMB 50.**
 
-This section does not exclude liability for personal injury caused by
-Reallysec, for property damage caused by Reallysec's intent or gross
-negligence, or any other liability that cannot be excluded by law.
+**11.3** Sections 11.1 and 11.2 do not limit or exclude Reallysec's liability
+for (a) death or personal injury; (b) property damage caused intentionally or
+by gross negligence; (c) fraud or wilful misconduct; or (d) any other liability
+that cannot be limited or excluded under applicable law, including Article 506
+of the Civil Code of the People's Republic of China.
 
-## 11. Term and Termination
+## 12. Term and Termination
 
 This Agreement takes effect when you first install or use the Software and
 continues until it is terminated. Reallysec may terminate this Agreement if you
 breach Section 3 or fail to pay applicable fees and do not cure the breach
-within thirty (30) days of notice.
+within thirty (30) days of notice, or with immediate effect where Section 14.3
+applies.
 
 When a License expires, the rights it grants beyond the Community Edition end,
 and you may continue to use the Software as the Community Edition under
 Section 2. A revoked License ends the same way.
 
-On termination you must stop using the Software and destroy all copies.
-Sections 3, 4, 8, 9.2, 10, 12, and 13 survive termination.
+On termination you must stop using the Software and destroy all copies. You may,
+however, keep running the Software for up to thirty (30) days solely to export
+the records it holds, unless applicable law prohibits it or the termination
+results from your use of the Software in violation of law. Sections 3, 4, 6.6,
+8, 9.2, 9.3, 10, 11, 14, 15, and 16 survive termination.
 
-## 12. Governing Law and Disputes
+## 13. Changes to this Agreement
+
+Reallysec may update this Agreement. Each version of the Software is delivered
+with the Agreement that applies to it, and the version number and effective
+date appear at the top. When the version changes, the Software may ask each
+User to accept the new version as described at the beginning of this Agreement. For
+a paid License, the Agreement in effect when your License term starts applies
+until that term ends, and an updated Agreement applies from your next renewal.
+For the Community Edition and trials, an updated Agreement applies when you
+install, or upgrade to, a version of the Software that includes it.
+
+## 14. Export Control and Sanctions
+
+**14.1 Compliance.** Each party will comply with the export control and
+economic sanctions laws that apply to it, to the Software, or to the
+transaction, including the Export Control Law of the People's Republic of China
+and, where they apply, the sanctions of the United Nations Security Council and
+the export control and sanctions laws of the European Union and the United
+States. You will not export, re-export, or transfer the Software, or give
+access to it, in violation of those laws. Nothing in this Section requires
+either party to act in a way that would violate the laws of the People's
+Republic of China.
+
+**14.2 Your representations. You represent that (a) you are not identified on,
+and are not owned or controlled by a person identified on, a restricted-party
+or sanctions list under the laws referred to in Section 14.1 that prohibits
+Reallysec from supplying the Software to you; and (b) you will not use the
+Software for an end use prohibited by those laws, including the development or
+production of weapons of mass destruction or their means of delivery. You will
+notify Reallysec promptly if either statement stops being true.**
+
+**14.3 Suspension.** If supplying the Software or a License to you would
+violate the laws referred to in Section 14.1, Reallysec may suspend or terminate
+your License without liability. Where the law permits, Reallysec will refund the
+fees you prepaid for the unused remainder of the Subscription Term.
+
+## 15. Governing Law and Disputes
 
 This Agreement is governed by the laws of the People's Republic of China,
 excluding its conflict-of-laws rules. The parties will first try to resolve any
@@ -188,7 +439,7 @@ Hefei Arbitration Commission for arbitration under its rules then in effect. The
 seat of arbitration is Hefei, Anhui Province, and the language of arbitration
 is Chinese. The award is final and binding on both parties.
 
-## 13. General
+## 16. General
 
 - **Entire agreement.** This Agreement, together with your Order, is the entire
   agreement between you and Reallysec regarding the Software and supersedes all
@@ -207,47 +458,70 @@ is Chinese. The award is final and binding on both parties.
 - **Severability and waiver.** If any provision is held unenforceable, the
   remaining provisions remain in effect. Failure to enforce a provision is not a
   waiver.
-- **Language.** This Agreement is provided in English and Chinese. If the two
-  versions conflict, the English version prevails.
+- **Trademarks.** Splunk is a trademark or registered trademark of Splunk LLC
+  in the United States and other countries. The Software is an independent
+  product and is not affiliated with, endorsed by, or sponsored by Splunk LLC or
+  Cisco. References to Splunk identify the platform the Software works with.
+  Other names may be trademarks of their respective owners.
+- **Language.** This Agreement is provided in Chinese and English. If the two
+  versions conflict, the Chinese version prevails.
 
 Contact: https://reallysec.com
 
 ---
 
-# RST Splunk AI Copilot 最终用户许可协议
+# RST AI Copilot for Splunk 最终用户许可协议
 
-版本 1.2 · 生效日期 2026-10-06
+版本 1.3 · 生效日期 2026-10-06
 
 本《最终用户许可协议》（「本协议」）由安徽斯普朗克信息技术有限公司（Anhui
 Reallysec Information Technology Ltd.，「版权人」）与安装或使用本软件的个人
-或单位（「您」）订立。您安装、激活或使用本软件，即表示同意本协议。如不同意，
-请勿安装或使用本软件。您代表单位接受本协议的，即表示您有权代表该单位签约，
+或单位（「您」）订立。您代表单位接受本协议的，即表示您有权代表该单位签约，
 「您」指该单位。
 
-**请您特别注意本协议中以加粗方式标示的条款。这些条款限制版权人的担保与赔偿
-责任，并限制您使用本软件的方式。**
+**接受方式。** 您安装、激活或使用本软件，即表示接受本协议。本软件请用户确认
+已阅读并同意本协议的（例如首次使用时，或本协议版本变更后），未予确认的用户
+不得使用本软件。如不同意，请勿安装或使用本软件。
+
+**请您特别注意本协议中以加粗方式标示的条款。这些条款限制版权人的担保、赔偿及
+责任（第九条、第十条、第十一条），限制您使用本软件的方式（第三条、第十四条），
+并规定您对您的数据及其发送目的地（第六条）、大模型生成内容以及本软件按您的指示
+在您的 Splunk® 部署及所连接系统中所做变更（第九条第（三）款）应承担的责任。**
 
 ## 一、定义
 
-- **「本软件」**：版权人交付的 RST Splunk AI Copilot，包括 Splunk 应用包、
-  密封及编译后的功能模块、文档及版权人提供的任何更新。
+- **「本软件」**：版权人以目标代码形式交付的 RST AI Copilot for Splunk，包括
+  Splunk 应用包、密封及编译后的功能模块、文档及版权人提供的任何更新。本软件是
+  一款安全运营助手，运行于您安装它的 Splunk 部署中，读取其中的数据，并可按您的
+  指示对其执行操作。
 - **「文档」**：版权人在 https://reallysec.com/docs 为本软件发布的使用与安装
   指南。
 - **「许可」**：版权人签发的许可密钥或许可文件，其中载明您的版本、功能集、
   搜索头数、用户数及期限。
-- **「搜索头」**：安装本软件的 Splunk 搜索头或搜索头集群成员。
-- **「用户」**：持有本软件角色或以其他方式具有使用本软件权限的 Splunk 用户账号。
 - **「版本」**：社区版、专业版、企业版或试用。专业版、企业版及试用以许可载明为准；
   未使用许可时即为社区版。
+- **「付费版本」**：您已支付相应费用的许可项下的专业版或企业版。试用不属于付费
+  版本。
+- **「订阅期」**：您的许可或订单载明的付费版本许可期限。
+- **「搜索头」**：安装本软件的 Splunk 搜索头或搜索头集群成员。
+- **「用户」**：持有本软件角色或以其他方式具有使用本软件权限的 Splunk 用户账号。
 - **「订单」**：您据以取得许可的报价单、采购订单或其他文件。
-- **「您的数据」**：本软件代您处理的日志、告警及其他数据。
+- **「您的数据」**：本软件从您的 Splunk 部署读取或以其他方式代您处理的日志、事件、
+  告警、重要事件（notable event）、资产与身份记录、配置及其他数据。
+- **「大模型服务商」**：您在本软件中配置的大模型或向量化（embeddings）端点的
+  提供方，包括您自行部署的模型。
+- **「大模型生成内容」**：本软件借助大模型生成的分析、摘要、回答、SPL 查询、检测
+  规则、拟议变更及其他内容。
+- **「Splunk 操作」**：本软件按您或您的用户的指示所做的变更，例如更新 Splunk
+  Enterprise Security 重要事件的状态、紧急程度、负责人或备注，以保存的搜索形式
+  部署、启用、修改或删除检测规则，以及通过您接入的服务创建工单或发送通知。
 
 ## 二、许可授予
 
 在您遵守本协议并支付相应费用的前提下，版权人授予您一项非独占、不可转让、不可
-再许可的许可：在许可载明的期限内，为您的内部业务运营安装和使用本软件，搜索头
-数及用户数不超过许可允许的数量，功能以您的版本为限。您的员工及外包人员可代表您使用本
-软件，您对其遵守本协议的情况负责。
+再许可的许可：在许可载明的期限内，为您的内部业务运营安装和使用本软件，搜索头数
+及用户数不超过许可允许的数量，功能以您的版本为限。您的员工及外包人员可代表您
+使用本软件，您对其遵守本协议的情况负责。
 
 试用许可授予同等权利，但仅限于评估用途，期限以许可载明的试用期为准。
 
@@ -260,105 +534,258 @@ Reallysec Information Technology Ltd.，「版权人」）与安装或使用本�
 
 1. **移动、更改、禁用或规避许可密钥功能，或移除、遮蔽受许可密钥保护的任何
    功能；**
-2. **对密封或编译后的功能模块或本软件的任何其他部分进行解密、反编译、反汇编或反向工程，
-   但适用法律明确允许且不受本限制约束的除外；**
+2. **对密封或编译后的功能模块或本软件的任何其他部分进行解密、反编译、反汇编或
+   反向工程，但适用法律明确允许且不受本限制约束的除外；**
 3. **以托管服务或代管服务形式向第三方提供本软件，或以其他方式使第三方得以使用
    本软件的主要功能；**
 4. **出售、出租、租赁、出借、再许可、分发或以其他方式转让本软件或许可，但经
    版权人书面同意的除外；**
 5. **在超出许可允许范围的搜索头、用户、主机或组织之间共用同一许可；**
 6. **移除、更改或遮蔽本软件中的任何版权、商标、许可或其他声明；**
-7. **违反适用法律（包括出口管制及数据保护法律）使用本软件。**
+7. **违反适用法律（包括第六条及第十四条所述的出口管制、制裁及数据保护法律）
+   使用本软件。**
 
 ## 四、权利归属
 
 本软件系许可使用，而非出售。版权人及其许可方保留对本软件的一切权利、所有权及
 权益，包括全部知识产权。本协议未明确授予的一切权利均予保留。
 
+版权人不主张对您的数据或大模型生成内容的所有权。您使用大模型生成内容的风险依
+第九条第（三）款由您自行承担。
+
 您就本软件提出的建议或反馈，版权人可不受限制地使用，且不对您负有任何义务。
 
-## 五、第三方组件
+## 五、第三方组件与服务
 
 本软件包含第三方及开源组件，清单见随本软件交付的 THIRD-PARTY-NOTICES 文件。
 各组件依据其各自的条款授权，您对该组件的使用受该条款约束。本协议不限制您在
 该等许可项下享有的权利。
 
-## 六、数据
+您的 Splunk 部署（包括 Splunk Enterprise Security）、大模型服务商以及您接入本
+软件的通知、工单、威胁情报及审计转发服务均不属于本软件。您依据与其提供方之间的
+协议取得该等服务。版权人不控制该等服务，亦不对其可用性、安全性、内容或其对您
+所发送数据的处理负责。
 
-本软件运行于您的 Splunk 部署中。您的数据处于您的控制之下并由您负责，包括在适用的数据
-保护法律项下的责任。
+## 六、数据与隐私
 
-- **许可与更新服务。** 为激活和校验许可并提供更新，本软件向版权人的许可服务
-  发送许可标识、产品标识及版本、由机器标识生成的主机指纹哈希值以及激活状态，
-  不发送您的数据。您的版本包含离线激活时，离线激活不发送任何数据。
-- **大模型。** 本软件依据您选择的字段脱敏模式，将提示词（可能包含您的数据的一
-  部分）发送至您配置的大模型端点。该等端点由您或您选择的服务商依据其自身条款
-  提供，版权人不接收该等数据。
+### （一）您的数据
 
-## 七、更新、支持与预览功能
+本软件运行于您的 Splunk 部署中。您的数据处于您的控制之下并由您负责，包括在适用
+的数据保护法律项下的责任。除依本条第（六）款进行支持访问外，版权人不通过本软件
+接收您的数据。
 
-版权人可在许可期限内提供更新。支持、服务水平及维护仅依据您的订单或单独的支持
-协议提供。
+### （二）本软件向您的环境之外发送的数据
+
+除您自行配置的目的地（例如大模型服务商及向量化端点、通知渠道、ServiceNow 或
+Jira、威胁情报查询服务及审计转发目标）外，本软件仅在下列情形向您的环境之外发送
+数据：
+
+- **许可服务。** 在线激活许可时（首次尝试失败的，每隔数分钟重试直至成功），此后
+  许可有效期间大约每二十四（24）小时一次，以及会话需要续期时，本软件向版权人的
+  许可服务（license.reallysec.com）发送许可标识（激活时还发送许可密钥本身）、
+  产品标识及版本、Splunk 服务器 GUID、主机指纹（由机器标识生成的哈希值）、Splunk
+  版本（激活时）、用户数（每次心跳时）、一次性随机值以及时间戳。本软件还大约每
+  二十四（24）小时从许可服务下载一次已吊销许可清单，该请求仅携带其已持有清单的
+  日期。未使用许可时，本软件不联系许可服务。您的版本包含离线激活时，离线激活不
+  联系许可服务。
+- **更新检查。** 管理员打开本软件设置中的版本与更新部分时，本软件从 GitHub
+  Releases 或您配置的镜像下载经签名的版本清单；仅在管理员选择时才下载新版本。
+  该等请求除普通 HTTP 请求本身携带的信息外，不发送任何客户数据。本软件不会按自身
+  计划自行检查更新。在无法访问互联网的环境中，该检查仅会失败。
+- **操作系统生命周期目录。** 管理员手动运行生命周期目录同步工具时，该工具从
+  endoflife.date 下载公开的产品生命周期数据，不发送任何客户数据。
+- **大模型。** 本软件依据您选择的字段脱敏模式，将提示词和查询结果（可能包含您
+  的数据的一部分）发送至您配置的大模型及向量化端点。版权人不接收该等数据。
+
+与任何互联网服务一样，许可服务也会收到每次请求的来源 IP 地址。依本条发送至
+版权人、GitHub 或 endoflife.date 的任何数据均不包含您的日志、事件、告警、提问
+或大模型生成内容的内容。版权人不使用您的数据训练大模型。
+
+### （三）版权人对许可服务数据的使用
+
+对于依本条第（二）款到达其许可服务的数据（包括 IP 地址），版权人仅用于激活和
+校验许可、执行许可的搜索头数及用户数限制、发现许可的滥用、依第八条核验用量以及
+提供支持。版权人不出售该等数据，也不将其用于广告。版权人在您的许可有效期间及
+许可终止后至多两（2）年内保存该等数据，法律要求更长期限的除外，期满后予以删除
+或匿名化处理。该等数据中属于个人信息的部分，版权人按照其隐私政策
+（https://reallysec.com/privacy-policy）处理。
+
+### （四）大模型服务商及其他目的地
+
+**字段脱敏依据已知的模式和字段名进行匹配，可以减少但不能保证完全去除发送给大模型
+服务商的内容中的个人信息或敏感信息；发送至威胁情报查询服务的指标不经脱敏。大模型
+服务商、脱敏模式及其他目的地由您选择。您对与其各自之间的协议负责（包括其是否可以
+保留您的数据或将其用于训练模型），并负责遵守向其发送数据所适用的法律，包括个人
+信息保护及数据出境的相关规定。**
+
+### （五）数据出境
+
+**您的数据发送至何处由您决定。您配置的大模型服务商、通知渠道或其他目的地位于中国
+境外的，向其发送数据所适用的安全评估、标准合同、认证、个人同意或其他要求，由您
+负责履行。** 许可服务由版权人运营，可能部署在中国境外；GitHub Releases 由 GitHub
+在中国境外运营。向其发送的数据仅限于本条第（二）款所列数据。未使用许可或离线激活
+的安装实例不向许可服务发送任何数据。
+
+### （六）支持访问
+
+版权人仅在您针对具体支持请求事先授权的情况下，并在您授权的范围内，访问您的环境
+或您的数据。此时版权人作为《中华人民共和国个人信息保护法》第二十一条所称的受托人
+代您处理数据：仅为提供您所请求的支持并按照您的指示处理您的数据，对其保密，仅允许
+负有保密义务的人员访问，并且在支持完成后不保留副本，但经您同意的除外。经您要求，
+版权人将与您签订载明上述义务的数据处理协议。
+
+## 七、许可校验、更新、支持与预览功能
+
+**付费许可或试用许可在激活时及本软件运行期间接受校验；在线激活的，还会在依第六条
+第（二）款进行的每次心跳时校验。许可到期或被吊销，或在线校验持续失败超过文档所述
+宽限期的，超出社区版的功能停止生效，本软件按社区版继续运行。您的数据不会被删除。**
+
+版本均经版权人签名，未通过签名或校验和验证的，本软件予以拒绝。新版本仅在管理员
+选择时下载和安装。
+
+版权人可在许可期限内提供更新，并可自行决定为社区版提供更新。支持、服务水平及
+维护仅依据您的订单或单独的支持协议提供。
 
 本软件或文档标示为预览、测试或实验性质的功能仅供评估。版权人可随时变更或移除
-该等功能，第九条第（一）款不适用于该等功能。
+该等功能，第九条第（一）款及第十条不适用于该等功能。
 
 ## 八、用量核验
 
-经版权人书面要求（每十二（12）个月不超过一次），您应在三十（30）日内提供经您
-授权代表签署的书面说明，载明本软件的安装搜索头数、用户数及所用版本。如该说明显示使用
-超出许可范围，您应按版权人届时有效的价目表支付超出部分的费用。
+**自行申报。** 经版权人书面要求（每十二（12）个月不超过一次），您应在三十（30）
+日内提供经您授权代表签署的书面说明，载明本软件的安装搜索头数、用户数及所用版本。
+版权人亦可依据其许可服务保存的激活记录进行核验。
+
+**审计。** 版权人或负有保密义务的独立审计方可核验您对本软件的使用，每十二（12）
+个月不超过一次，应至少提前三十（30）日书面通知，在您的正常工作时间内进行，能远程
+进行的远程进行，且不得不合理地干扰您的业务。审计中获得的信息仅用于核验您是否遵守
+许可，并予以保密。审计费用由版权人承担；但审计显示您在被审计期间少付的费用超过
+应付费用百分之五（5%）的，您应向版权人偿付合理的审计费用。
+
+核验显示使用超出许可范围的，您应按版权人届时有效的价目表支付超出部分的费用。
 
 ## 九、担保
 
-### （一）有限担保
+### （一）付费版本的有限担保
 
-对于付费许可，版权人担保：自许可首次签发之日起九十（90）日内，本软件的运行与
-文档描述基本相符。如不相符且您在该期限内通知版权人，版权人可选择修正本软件，
-或退还您为不相符软件支付的费用（此时您的许可终止）。**上述措施是您就违反本担保
-可获得的唯一救济。** 本担保不适用于社区版、试用许可、预览功能，以及因修改、误用或在
-文档未支持的环境中运行而导致的问题。
+版权人担保：在订阅期内，版权人交付的本软件在所有重大方面按照文档运行。如不相符，
+且您在订阅期内以书面形式向版权人发出载明合理细节的通知，版权人将修复或更换本软件。
+版权人自收到通知之日起三十（30）日内未能修复或更换的，任何一方均可终止相关许可，
+版权人将退还您已预付的该许可订阅期剩余部分的费用。**上述措施是您就违反本担保可
+获得的唯一救济，也是版权人就此承担的全部责任。** 本担保不适用于预览功能、大模型
+生成内容、第三方组件与服务、版权人已不再支持的版本，以及因修改、误用或在文档未
+支持的环境中运行而导致的问题。
 
 ### （二）免责声明
 
-**除本条第（一）款外，在法律允许的最大范围内，本软件按「现状」及「现有可用」
-提供，不附带任何明示或默示的担保，包括对适销性、特定用途适用性及不侵权的担保。
-版权人不保证本软件无错误、不中断，亦不保证其能够检测、阻止或缓解任何安全事件。
-由大模型生成的内容可能不准确，您在依赖前须自行审核。本软件是您自身安全控制、
+**社区版、试用许可及预览功能按「现状」提供，不附带任何担保。除本条第（一）款外，
+在法律允许的最大范围内，本软件按「现状」及「现有可用」提供，不附带任何明示或默示
+的担保，包括对适销性、特定用途适用性及不侵权的担保。版权人不保证本软件无错误、
+不中断，亦不保证其能够检测、阻止或缓解任何安全事件。本软件是您自身安全控制、
 监测及专业判断的辅助工具，不能替代之。**
 
-## 十、责任限制
+### （三）大模型生成内容与 Splunk 操作
 
-**在法律允许的最大范围内，对于任何间接的、附带的、特殊的、后果性的或惩罚性的
-损害，或任何利润、收入、数据或业务损失，版权人均不承担责任，即使已被告知该等
+**大模型生成内容由版权人无法控制的大模型生成，可能不完整或不正确，相同输入也可能
+得到不同输出。对于大模型生成内容（包括任何拟议变更、SPL 查询、检测规则、分诊结论
+或调查结论），您须在依赖或据以采取行动前由具备相应能力的人员审核。**
+
+**Splunk 操作依您的指示执行。由您决定哪些用户可执行该等操作，并由您控制授予本软件
+及其用户的 Splunk 角色与权限；您负责在确认前审核每一项拟议变更，并对您确认的变更给
+您的 Splunk 部署及所连接系统造成的影响负责。版权人建议您仅授予所需的权限，先在非
+生产环境中试行检测规则，并备份您的 Splunk 配置。**
+
+## 十、知识产权赔偿（付费版本）
+
+**（一）抗辩与赔付。** 第三方向您提出索赔，主张付费版本的本软件（以版权人交付的
+形式并按照本协议及文档使用）侵犯其专利权、著作权或商标权或者侵犯其商业秘密的，
+版权人将自费为您抗辩，并支付法院或仲裁庭终局裁判您应承担的赔偿及费用，或经版权人
+书面同意的和解中约定的金额。
+
+**（二）程序。** 版权人承担上述义务的前提是您：（1）及时书面通知版权人，使其抗辩
+不因迟延而受损；（2）由版权人全权控制该索赔的抗辩与和解；（3）提供合理配合，由此
+产生的合理实际支出由版权人承担。您可以自费委托律师参与抗辩。未经版权人事先书面
+同意，您不得就该索赔达成和解；未经您同意，版权人不得达成要求您承认过错或者要求您
+从事停止使用本软件以外的任何行为的和解。
+
+**（三）补救措施。** 本软件被认定或版权人认为可能被认定侵权的，版权人可自行选择
+并自费：（1）为您取得继续使用的权利；（2）修改或更换本软件，使其不再侵权且功能
+不受重大减损；或（3）上述两项在商业上均不合理可行的，终止相关许可，并退还您已
+预付的该许可订阅期剩余部分的费用。
+
+**（四）除外情形。对于索赔中因下列原因引起的部分，版权人不承担本条项下的义务：
+（1）社区版、试用许可或预览功能；（2）版权人以外的任何人对本软件的修改；（3）将本
+软件与非由版权人提供的产品、数据或流程结合使用，且如无该结合不会引起该索赔；
+（4）大模型生成内容，或大模型服务商的模型及服务；（5）THIRD-PARTY-NOTICES 文件
+所列的第三方及开源组件，或第五条所述的第三方服务；（6）您的数据或您提供的其他
+材料；（7）在版权人通知您停止使用、或已提供可避免该索赔的修改或更新后，您继续使用
+被指侵权的本软件；（8）您违反本协议使用本软件。**
+
+**（五）限额。版权人在本条项下的义务受第十一条第（二）款所述限额的限制。本条规定
+了版权人就本软件侵犯或侵占第三方知识产权的索赔所承担的全部责任，以及您就此可获得
+的唯一救济。**
+
+## 十一、责任限制
+
+**（一）在法律允许的最大范围内，对于任何间接的、附带的、特殊的、后果性的或惩罚性
+的损害，或任何利润、收入、数据或业务损失，版权人均不承担责任，即使已被告知该等
 损害的可能性。**
 
-**版权人因本协议引起或与之相关的全部累计赔偿责任（无论基于何种法律理论），不
-超过引起索赔的事件发生前十二（12）个月内您就本软件实际向版权人支付的费用总额。
-社区版或试用许可的该金额为零。**
+**（二）在法律允许的最大范围内，版权人因本协议引起或与之相关的全部累计赔偿责任
+（无论基于何种法律理论）：（1）对于付费版本，不超过引起索赔的事件发生前十二（12）
+个月内您就本软件实际向版权人支付的费用总额；（2）对于社区版、试用许可或预览功能，
+不超过上述费用总额与人民币 50 元两者中的较高者。**
 
-本条不排除版权人造成人身损害的责任、因故意或者重大过失造成财产损失的责任，
-以及其他依法不得排除的责任。
+**（三）** 本条第（一）款及第（二）款不限制或排除版权人的下列责任：（1）造成对方
+人身损害的责任；（2）因故意或者重大过失造成对方财产损失的责任；（3）欺诈或故意
+不当行为的责任；（4）依适用法律（包括《中华人民共和国民法典》第五百零六条）不得
+限制或排除的其他责任。
 
-## 十一、期限与终止
+## 十二、期限与终止
 
 本协议自您首次安装或使用本软件之时生效，持续至本协议终止。如您违反第三条或
-未支付相应费用，且在收到通知后三十（30）日内未予纠正，版权人可终止本协议。
+未支付相应费用，且在收到通知后三十（30）日内未予纠正，版权人可终止本协议；出现
+第十四条第（三）款所述情形的，版权人可立即终止本协议。
 
 许可到期后，该许可授予的超出社区版的权利随之终止，您可依第二条继续以社区版
 使用本软件。许可被吊销的，亦同。
 
-本协议终止后，您须停止使用本软件并销毁全部副本。第三条、第四条、
-第八条、第九条第（二）款、第十条、第十二条及第十三条在本协议终止后继续有效。
+本协议终止后，您须停止使用本软件并销毁全部副本。但您可以在三十（30）日内仅为
+导出本软件保存的记录而继续运行本软件，适用法律禁止或者本协议因您违法使用本软件
+而终止的除外。第三条、第四条、第六条第（六）款、第八条、第九条第（二）款及
+第（三）款、第十条、第十一条、第十四条、第十五条及第十六条在本协议终止后继续有效。
 
-## 十二、适用法律与争议解决
+## 十三、协议变更
+
+版权人可更新本协议。本软件的每个版本均随附适用于该版本的协议，版本号及生效日期
+载于协议开头。协议版本变更时，本软件可按本协议开头所述方式请每位用户接受新版本。
+对于付费许可，许可期限开始时有效的协议适用至该期限届满，更新后的协议自您下次续订
+时起适用。对于社区版及试用，更新后的协议自您安装或升级至包含该协议的本软件版本时
+起适用。
+
+## 十四、出口管制与制裁
+
+**（一）合规。** 各方应遵守适用于其自身、本软件或相关交易的出口管制与经济制裁
+法律，包括《中华人民共和国出口管制法》，以及在适用的情况下联合国安理会的制裁措施
+和欧盟、美国的出口管制与制裁法律。您不得违反该等法律出口、再出口或转让本软件，或
+向他人提供本软件的访问。本条不要求任何一方从事违反中华人民共和国法律的行为。
+
+**（二）您的声明。您声明：（1）您未被列入、亦不受被列入以下名单的人员所有或控制：
+依本条第（一）款所述法律设立、禁止版权人向您提供本软件的限制方名单或制裁名单；
+（2）您不会将本软件用于该等法律禁止的最终用途，包括研制或生产大规模杀伤性武器
+及其运载工具。上述声明不再属实的，您应及时通知版权人。**
+
+**（三）暂停。** 向您提供本软件或许可将违反本条第（一）款所述法律的，版权人可
+暂停或终止您的许可，且不承担责任。在法律允许的情况下，版权人将退还您已预付的
+订阅期剩余部分的费用。
+
+## 十五、适用法律与争议解决
 
 本协议适用中华人民共和国法律（不含法律冲突规则）。因本协议引起的或与本协议
 有关的任何争议，双方应首先通过友好协商解决。协商不成的，任何一方均有权将争议
 提交至合肥仲裁委员会，按照其届时有效的仲裁规则进行仲裁。仲裁地点为安徽省合肥
 市，仲裁语言为中文。仲裁裁决为终局裁决，对双方均有约束力。
 
-## 十三、其他
+## 十六、其他
 
 - **完整协议。** 本协议与您的订单共同构成您与版权人之间就本软件达成的完整
   协议，并取代此前的一切约定。订单与本协议冲突的，以订单为准。
@@ -371,6 +798,10 @@ Reallysec Information Technology Ltd.，「版权人」）与安装或使用本�
   info@reallysec.com。致您的通知发送至您订单或许可载明的联系方式。
 - **可分割与弃权。** 任何条款被认定为不可执行的，不影响其余条款的效力。任何一
   方未行使某项条款，不构成对该条款的放弃。
-- **语言。** 本协议以中英文两种文本提供，两种文本如有冲突，以英文文本为准。
+- **商标。** Splunk 是 Splunk LLC 在美国及其他国家或地区的商标或注册商标。本软件
+  是独立产品，与 Splunk LLC 或思科（Cisco）不存在隶属、认可或赞助关系。本协议及
+  本软件中提及 Splunk 仅用于说明本软件所适配的平台。其他名称可能是其各自所有者的
+  商标。
+- **语言。** 本协议以中英文两种文本提供，两种文本如有冲突，以中文文本为准。
 
 联系方式：https://reallysec.com

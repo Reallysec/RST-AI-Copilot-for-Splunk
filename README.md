@@ -1,8 +1,8 @@
 <p align="center">
-  <img src=".github/assets/product-mark.svg" width="96" height="96" alt="RST Splunk AI Copilot">
+  <img src=".github/assets/product-mark.svg" width="96" height="96" alt="RST AI Copilot for Splunk">
 </p>
 
-<h1 align="center">RST Splunk AI Copilot</h1>
+<h1 align="center">RST AI Copilot for Splunk®</h1>
 
 <p align="center">
   <b>Ask your Splunk data in plain language.</b><br>
@@ -26,7 +26,7 @@
   <img src=".github/assets/chat-result.en.png" alt="Ask a question, get the SPL and the result table" width="92%">
 </p>
 
-## Why RST Splunk AI Copilot
+## Why RST AI Copilot for Splunk
 
 - **Runs inside the Splunk you already have.** A native app (`.spl`) on the search head — no sidecar, no new data store, no extra search engine. It reads your existing indexes and writes only its own KV store collections and a `copilot:audit` sourcetype.
 - **Read-only by design.** Every generated search is validated as read-only before it runs, and an index allowlist bounds what the model may query.
@@ -145,6 +145,6 @@ The four engines ship encrypted; the decryption key comes with the licence and i
 
 ## Licence
 
-RST Splunk AI Copilot is proprietary software, free to use as the Community Edition under the [End User License Agreement](LICENSE). This repository holds the introduction and the release downloads; the source code is not published. "RST", "Reallysec", "斯普朗克" and the product logos are trademarks of Anhui Reallysec Information Technology Ltd. Splunk is a trademark of its respective owner; this is a third-party app, not affiliated with or endorsed by Splunk.
+RST AI Copilot for Splunk is proprietary software, free to use as the Community Edition under the [End User License Agreement](LICENSE). This repository holds the introduction and the release downloads; the source code is not published. "RST", "Reallysec", "斯普朗克" and the product logos are trademarks of Anhui Reallysec Information Technology Ltd. Splunk® is a registered trademark of Splunk LLC (a Cisco company) in the United States and other countries. RST AI Copilot for Splunk is a third-party app and is not affiliated with, sponsored by, or endorsed by Splunk LLC or Cisco.
 
 © Anhui Reallysec Information Technology Ltd.

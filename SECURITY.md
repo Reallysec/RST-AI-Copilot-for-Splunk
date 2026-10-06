@@ -4,8 +4,8 @@ Anhui Reallysec Information Technology Ltd. ("Reallysec") takes the
 security of its software seriously, including all source code repositories in
 the [reallysec](https://github.com/reallysec) GitHub organization.
 
-If you believe you have found a security vulnerability in RST Splunk AI
-Copilot, please report it to us as described below.
+If you believe you have found a security vulnerability in RST AI Copilot
+for Splunk, please report it to us as described below.
 
 ## Reporting Security Issues
 

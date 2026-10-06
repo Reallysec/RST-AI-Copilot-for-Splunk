@@ -1,8 +1,8 @@
 <p align="center">
-  <img src=".github/assets/product-mark.svg" width="96" height="96" alt="RST Splunk AI Copilot">
+  <img src=".github/assets/product-mark.svg" width="96" height="96" alt="RST AI Copilot for Splunk">
 </p>
 
-<h1 align="center">RST Splunk AI Copilot</h1>
+<h1 align="center">RST AI Copilot for Splunk®</h1>
 
 <p align="center">
   <b>用大白话查你的 Splunk 数据。</b><br>
@@ -26,7 +26,7 @@
   <img src=".github/assets/chat-result.zh.png" alt="问一句，拿到生成的 SPL 和结果表" width="92%">
 </p>
 
-## 为什么是 RST Splunk AI Copilot
+## 为什么是 RST AI Copilot for Splunk
 
 - **跑在你现有的 Splunk 里。** 一个原生应用（`.spl`）装在搜索头上 —— 没有旁路网关、没有新存储、没有额外的搜索引擎。它读你现有的索引，只写自己的 KV store 集合和一个 `copilot:audit` sourcetype。
 - **设计上只读。** 每条生成的检索在执行前都被校验为只读，索引白名单再框住模型能查的范围。
@@ -145,6 +145,6 @@ $SPLUNK_HOME/bin/splunk restart
 
 ## 许可
 
-RST Splunk AI Copilot 是专有软件，依据 [最终用户许可协议](LICENSE) 可免费以社区版使用。本仓库只放产品介绍和版本下载，不公开源代码。"RST"、"Reallysec"、"斯普朗克" 及产品标识为安徽斯普朗克信息技术有限公司的商标。Splunk 是其各自所有者的商标；本项目为第三方应用，与 Splunk 无隶属或背书关系。
+RST AI Copilot for Splunk 是专有软件，依据 [最终用户许可协议](LICENSE) 可免费以社区版使用。本仓库只放产品介绍和版本下载，不公开源代码。"RST"、"Reallysec"、"斯普朗克" 及产品标识为安徽斯普朗克信息技术有限公司的商标。Splunk® 是 Splunk LLC（思科旗下公司）在美国及其他国家/地区的注册商标。RST AI Copilot for Splunk 为第三方应用，与 Splunk LLC 及思科无隶属、赞助或背书关系。
 
 © 安徽斯普朗克信息技术有限公司

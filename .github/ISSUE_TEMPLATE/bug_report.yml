@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a problem with RST Splunk AI Copilot
+description: Report a problem with RST AI Copilot for Splunk
 title: "[Bug]: "
 labels: ["bug", "triage"]
 body:
