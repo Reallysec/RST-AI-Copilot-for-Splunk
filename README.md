@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/reallysec/RST-Splunk-AI-Copilot/releases"><img src="https://img.shields.io/github/v/release/reallysec/RST-Splunk-AI-Copilot?label=release&color=65A637" alt="Latest release"></a>
+  <a href="https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases"><img src="https://img.shields.io/github/v/release/reallysec/RST-AI-Copilot-for-Splunk?label=release&color=65A637" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/Community%20Edition-free-65A637" alt="Community Edition: free">
   <img src="https://img.shields.io/badge/Splunk%20Enterprise-10.0%E2%80%9310.5-000000" alt="Splunk Enterprise 10.0-10.5">
   <img src="https://img.shields.io/badge/package-.spl-000000" alt="Splunk app package">
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <b>English</b> · <a href="README.zh-CN.md">简体中文</a> · <a href="https://reallysec.com/en/docs/splunk-ai-copilot">Docs</a> · <a href="https://github.com/reallysec/RST-Splunk-AI-Copilot/releases">Download</a> · <a href="https://github.com/reallysec/RST-Splunk-AI-Copilot/issues">Report an issue</a>
+  <b>English</b> · <a href="README.zh-CN.md">简体中文</a> · <a href="https://reallysec.com/en/docs/splunk-ai-copilot">Docs</a> · <a href="https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases">Download</a> · <a href="https://github.com/reallysec/RST-AI-Copilot-for-Splunk/issues">Report an issue</a>
 </p>
 
 <p align="center">
@@ -37,18 +37,18 @@
 
 You need Splunk Enterprise 10.0–10.5 on the search head (10.2+ with Python 3.13 to get the agentic engine, automatic fallback below that), the `admin_all_objects` capability to install, and an OpenAI-compatible LLM endpoint the search head can reach ([full requirements](https://reallysec.com/en/docs/splunk-ai-copilot/install/requirements)). Splunk Cloud is not supported yet: the in-app online update would not pass Cloud vetting.
 
-Each release on [Releases](https://github.com/reallysec/RST-Splunk-AI-Copilot/releases) carries two packages of the same version:
+Each release on [Releases](https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases) carries two packages of the same version:
 
 | Package | Use it for |
 |---|---|
-| `RST-Splunk-AI-Copilot-<version>-selfcontained.spl` | Splunk Enterprise on your own Linux x86_64 servers (recommended). Includes the agentic engine. |
-| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Splunk Enterprise on Windows or ARM search heads, or where compiled components are not allowed. Pure Python. |
+| `RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl` | Splunk Enterprise on your own Linux x86_64 servers (recommended). Includes the agentic engine and bundles x86_64 Linux native libraries. |
+| `RST-AI-Copilot-for-Splunk-<version>-fallback.spl` | Splunk Enterprise on Windows or ARM (aarch64) search heads, Splunkbase, or where compiled components are not allowed. Pure Python. |
 
 Install it in Splunk Web (**Apps → Manage Apps → Install app from file**) and restart, or on the search head:
 
 ```bash
-sha256sum -c RST-Splunk-AI-Copilot-<version>-selfcontained.spl.sha256
-tar xzf RST-Splunk-AI-Copilot-<version>-selfcontained.spl -C $SPLUNK_HOME/etc/apps/
+sha256sum -c RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl.sha256
+tar xzf RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl -C $SPLUNK_HOME/etc/apps/
 $SPLUNK_HOME/bin/splunk restart
 ```
 
@@ -106,12 +106,12 @@ Paid features stay visible in the Community Edition: a paid page opens in previe
 | Ticketing (ServiceNow / Jira) (Beta) | — | — | ✅ |
 | MCP server | — | — | ✅ |
 | Audit forwarding to syslog / webhook (SIEM, SOAR) | — | — | ✅ |
-| Multi-provider LLM failover and health probing (Beta) | — | — | ✅ |
+| Multi-provider LLM failover and health probing | — | — | ✅ |
 | Offline / air-gapped activation | — | — | ✅ |
 | Search heads | 1 | 1 | unlimited, incl. SHC |
 | Model calls | unlimited (your own model) | unlimited | unlimited |
 
-**Beta:** ticketing, Slack / Teams channels and LLM failover have so far been verified only against local stub endpoints, not against real ServiceNow, Jira, Slack, Teams or a second LLM vendor.
+**Beta:** ticketing and Slack / Teams channels have so far been verified only against local stub endpoints, not against real ServiceNow, Jira, Slack or Teams.
 
 The four engines ship encrypted; the decryption key comes with the licence and is bound to the host. Editions and purchase: [reallysec.com](https://reallysec.com/en/products/splunk-ai-copilot). Trials and licences: [console.reallysec.com](https://console.reallysec.com).
 
@@ -133,14 +133,14 @@ The four engines ship encrypted; the decryption key comes with the licence and i
 | Component | Supported |
 |---|---|
 | Splunk | Splunk Enterprise 10.0–10.5. The agentic engine needs 10.2+ with Python 3.13; below that a fully functional `requests` engine is used automatically. Tested on Splunk Enterprise 10.4.1, Python 3.13, RHEL 8 |
-| Platform | The `selfcontained` package is Linux x86_64 only; on Windows or ARM use the `fallback` package |
+| Platform | The `selfcontained` package is Linux x86_64 only (bundles x86_64 native libraries); on Windows or ARM (aarch64), and for Splunkbase, use the `fallback` package |
 | Splunk Free | Community features only. Paid features do not work: Splunk Free has no login, so scheduled jobs get no session key and the license heartbeat, scheduled reports and notifications never run |
 | LLM endpoint | Volcengine Ark, any OpenAI-compatible API, self-hosted vLLM / Ollama |
 | Install | Search head with the `admin_all_objects` capability |
 
 ## Support
 
-- **Questions and bugs**: open an [issue](https://github.com/reallysec/RST-Splunk-AI-Copilot/issues). See [SUPPORT](SUPPORT.md) for where to ask what.
+- **Questions and bugs**: open an [issue](https://github.com/reallysec/RST-AI-Copilot-for-Splunk/issues). See [SUPPORT](SUPPORT.md) for where to ask what.
 - **Security vulnerabilities**: do not open a public issue; follow the [security policy](SECURITY.md).
 
 ## Licence

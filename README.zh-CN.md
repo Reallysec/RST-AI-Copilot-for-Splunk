@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/reallysec/RST-Splunk-AI-Copilot/releases"><img src="https://img.shields.io/github/v/release/reallysec/RST-Splunk-AI-Copilot?label=release&color=65A637" alt="最新版本"></a>
+  <a href="https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases"><img src="https://img.shields.io/github/v/release/reallysec/RST-AI-Copilot-for-Splunk?label=release&color=65A637" alt="最新版本"></a>
   <img src="https://img.shields.io/badge/%E7%A4%BE%E5%8C%BA%E7%89%88-%E5%85%8D%E8%B4%B9-65A637" alt="社区版：免费">
   <img src="https://img.shields.io/badge/Splunk%20Enterprise-10.0%E2%80%9310.5-000000" alt="Splunk Enterprise 10.0-10.5">
   <img src="https://img.shields.io/badge/package-.spl-000000" alt="Splunk 应用包">
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="README.md">English</a> · <b>简体中文</b> · <a href="https://reallysec.com/docs/splunk-ai-copilot">文档</a> · <a href="https://github.com/reallysec/RST-Splunk-AI-Copilot/releases">下载</a> · <a href="https://github.com/reallysec/RST-Splunk-AI-Copilot/issues">反馈问题</a>
+  <a href="README.md">English</a> · <b>简体中文</b> · <a href="https://reallysec.com/docs/splunk-ai-copilot">文档</a> · <a href="https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases">下载</a> · <a href="https://github.com/reallysec/RST-AI-Copilot-for-Splunk/issues">反馈问题</a>
 </p>
 
 <p align="center">
@@ -37,18 +37,18 @@
 
 需要搜索头上的 Splunk Enterprise 10.0–10.5（10.2+ 且 Python 3.13 才能用 agentic 引擎，低于此版本自动回退），安装所需的 `admin_all_objects` 权限，以及一个搜索头能访问的 OpenAI 兼容大模型端点（[完整要求](https://reallysec.com/docs/splunk-ai-copilot/install/requirements)）。暂不支持 Splunk Cloud：应用内在线更新无法通过 Cloud 审核。
 
-[Releases](https://github.com/reallysec/RST-Splunk-AI-Copilot/releases) 的每个版本都带同一版本号的两个安装包：
+[Releases](https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases) 的每个版本都带同一版本号的两个安装包：
 
 | 安装包 | 适用场景 |
 |---|---|
-| `RST-Splunk-AI-Copilot-<version>-selfcontained.spl` | 自有 Linux x86_64 服务器上的 Splunk Enterprise（推荐），自带 agentic 引擎 |
-| `RST-Splunk-AI-Copilot-<version>-fallback.spl` | Windows 或 ARM 搜索头、或不允许编译组件的 Splunk Enterprise 环境，纯 Python |
+| `RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl` | 自有 Linux x86_64 服务器上的 Splunk Enterprise（推荐），自带 agentic 引擎，内含 x86_64 Linux 原生库 |
+| `RST-AI-Copilot-for-Splunk-<version>-fallback.spl` | Windows 或 ARM（aarch64）搜索头、Splunkbase、或不允许编译组件的 Splunk Enterprise 环境，纯 Python |
 
 在 Splunk Web 里安装（**Apps → Manage Apps → Install app from file**）后重启，或在搜索头上：
 
 ```bash
-sha256sum -c RST-Splunk-AI-Copilot-<version>-selfcontained.spl.sha256
-tar xzf RST-Splunk-AI-Copilot-<version>-selfcontained.spl -C $SPLUNK_HOME/etc/apps/
+sha256sum -c RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl.sha256
+tar xzf RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl -C $SPLUNK_HOME/etc/apps/
 $SPLUNK_HOME/bin/splunk restart
 ```
 
@@ -106,12 +106,12 @@ $SPLUNK_HOME/bin/splunk restart
 | 工单（ServiceNow / Jira，Beta） | — | — | ✅ |
 | MCP 服务 | — | — | ✅ |
 | 审计转发到 syslog / webhook（SIEM、SOAR） | — | — | ✅ |
-| 多提供方大模型故障转移与健康探测（Beta） | — | — | ✅ |
+| 多提供方大模型故障转移与健康探测 | — | — | ✅ |
 | 离线 / 气隙激活 | — | — | ✅ |
 | 搜索头数 | 1 | 1 | 不限，含 SHC |
 | 模型调用次数 | 不限（用你自己的模型） | 不限 | 不限 |
 
-**Beta：** 工单、Slack / Teams 通道和大模型故障转移目前只在本地模拟端点（stub）上验证过，尚未在真实的 ServiceNow、Jira、Slack、Teams 或第二家大模型服务上验证。
+**Beta：** 工单和 Slack / Teams 通道目前只在本地模拟端点（stub）上验证过，尚未在真实的 ServiceNow、Jira、Slack 或 Teams 上验证。
 
 四个引擎以密文形式发布，解密密钥随许可下发并绑定主机。版本与购买：[reallysec.com](https://reallysec.com/products/splunk-ai-copilot)。试用与许可：[console.reallysec.com](https://console.reallysec.com)。
 
@@ -133,14 +133,14 @@ $SPLUNK_HOME/bin/splunk restart
 | 组件 | 支持范围 |
 |---|---|
 | Splunk | Splunk Enterprise 10.0–10.5。agentic 引擎需 10.2+ 且 Python 3.13；低于此版本自动使用功能完整的 `requests` 引擎。实测环境：Splunk Enterprise 10.4.1、Python 3.13、RHEL 8 |
-| 平台 | `selfcontained` 安装包只支持 Linux x86_64；Windows 或 ARM 请用 `fallback` 安装包 |
+| 平台 | `selfcontained` 安装包只支持 Linux x86_64（内含 x86_64 原生库）；Windows 或 ARM（aarch64）以及 Splunkbase 请用 `fallback` 安装包 |
 | Splunk Free | 只能用社区版功能。付费功能不可用：Splunk Free 没有登录，定时任务拿不到会话 key，许可心跳、定时报表和通知都不会运行 |
 | 大模型端点 | 火山方舟、任意 OpenAI 兼容 API、自建 vLLM / Ollama |
 | 安装 | 具备 `admin_all_objects` 权限的搜索头 |
 
 ## 支持
 
-- **提问与报错**：开一个 [issue](https://github.com/reallysec/RST-Splunk-AI-Copilot/issues)。什么问题去哪问，见 [SUPPORT](SUPPORT.md)。
+- **提问与报错**：开一个 [issue](https://github.com/reallysec/RST-AI-Copilot-for-Splunk/issues)。什么问题去哪问，见 [SUPPORT](SUPPORT.md)。
 - **安全漏洞**：不要公开提 issue；按 [安全策略](SECURITY.md) 走。
 
 ## 许可
