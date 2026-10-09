@@ -37,12 +37,13 @@
 
 You need Splunk Enterprise 10.0–10.5 on the search head (10.2+ with Python 3.13 to get the agentic engine, automatic fallback below that), the `admin_all_objects` capability to install, and an OpenAI-compatible LLM endpoint the search head can reach ([full requirements](https://reallysec.com/en/docs/splunk-ai-copilot/install/requirements)). Splunk Cloud is not supported yet: the in-app online update would not pass Cloud vetting.
 
-Each release on [Releases](https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases) carries two packages of the same version:
+Each release on [Releases](https://github.com/reallysec/RST-AI-Copilot-for-Splunk/releases) carries these packages of the same version:
 
 | Package | Use it for |
 |---|---|
 | `RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl` | Splunk Enterprise on your own Linux x86_64 servers (recommended). Includes the agentic engine and bundles x86_64 Linux native libraries. |
-| `RST-AI-Copilot-for-Splunk-<version>-fallback.spl` | Splunk Enterprise on Windows or ARM (aarch64) search heads, Splunkbase, or where compiled components are not allowed. Pure Python. |
+| `RST-AI-Copilot-for-Splunk-<version>-fallback.spl` | Splunk Enterprise on Windows or ARM (aarch64) search heads, or where compiled components are not allowed. Pure Python. |
+| `RST-AI-Copilot-for-Splunk-<version>-splunkbase.spl` | The fallback package as listed on Splunkbase: the in-app update is off and Splunk offers new versions under **Manage Apps**. |
 
 Install it in Splunk Web (**Apps → Manage Apps → Install app from file**) and restart, or on the search head:
 
@@ -54,7 +55,7 @@ $SPLUNK_HOME/bin/splunk restart
 
 Open the app, go to **Settings → AI settings**, add your LLM endpoint and key, and confirm the index allowlist. The home page carries a first-run checklist and one-click demo data.
 
-There is one package for every edition. Without a licence it runs as the free Community Edition; importing a licence under **Settings → Activation** unlocks Professional or Enterprise in place, with no reinstall and no data migration.
+There is one package for every edition. Without a licence it runs as the free Community Edition; importing a licence under **Settings → License** unlocks Professional or Enterprise in place, with no reinstall and no data migration.
 
 ## Features
 
