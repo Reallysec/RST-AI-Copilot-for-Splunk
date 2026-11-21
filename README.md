@@ -53,7 +53,7 @@ tar xzf RST-AI-Copilot-for-Splunk-<version>-selfcontained.spl -C $SPLUNK_HOME/et
 $SPLUNK_HOME/bin/splunk restart
 ```
 
-Open the app, go to **Settings → AI settings**, add your LLM endpoint and key, and confirm the index allowlist. The home page carries a first-run checklist and one-click demo data.
+Installing asks nothing; there is no file to edit. Open the app, go to **Settings → AI settings**, add your LLM endpoint and key, and confirm the index allowlist. Licence, channels and threat intel are also set in the app, and take effect without a restart. The home page carries a first-run checklist and one-click demo data.
 
 There is one package for every edition. Without a licence it runs as the free Community Edition; importing a licence under **Settings → License** unlocks Professional or Enterprise in place, with no reinstall and no data migration.
 
